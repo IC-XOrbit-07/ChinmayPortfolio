@@ -1,0 +1,198 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Font settings */
+
+@font-face {
+    font-family: Lufga;
+    src: url('../Fonts/Lufga_Portfolio/LufgaLight.ttf');
+}
+
+@font-face {
+    font-family: Urbanist;
+    src: url('../Fonts/Urbanist/Urbanist[wght].ttf');
+}
+
+* {
+    font-family: Lufga;
+}
+
+/* Navbar styling */
+.navbar_portfolio {
+    background-color: #f2f2f5;
+    height: 65px;
+    margin-top: 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Default: Center everything */
+    padding: 0 20px; /* Adds padding inside the navbar */
+    position: relative; /* Needed for absolute positioning */
+}
+
+.welcome {
+    font-weight: 800 !important;
+    font-family: Urbanist;
+    font-size: 25px !important;
+    color: #ff6200 !important;
+    margin: 0; /* Removes extra margin around the text */
+    position: absolute; /* Allows centering independent of other elements */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure true centering */
+}
+
+
+.welcome_highlighter{
+    color: #FD853A;
+    text-decoration: none;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.welcome_responsive{
+    display: none;
+}
+.nav_item_container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1; /* Allows it to occupy available space */
+}
+
+.nav_item_container li {
+    display: inline-block;
+    padding: 10px 20px; /* Add padding to items for space */
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav_bar_items:hover{
+    background-color: #FD853A;
+    border-radius: 30px;
+    padding: 10px 10 10px;
+    width: max-content;    
+
+    color: white;
+}
+
+.nav_bar_items a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar_items:hover a {
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* Hamburger styling */
+.hamburger {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    padding-right: 10px; /* Add padding for alignment */
+    position: absolute;
+    right: 20px; /* Position hamburger to the far-right */
+}
+
+/* Hover effect */
+.nav_item_container li:hover{
+    color: #FD853A;
+}
+
+.hamburger{
+    display: none;
+}
+
+.menu_responsive{
+    display: none;
+}
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .nav_item_container {
+        display: none; /* Hide navigation items */
+    }
+
+    .welcome {
+        position: static; /* Reset positioning */
+        transform: none; /* Remove centering translation */
+        margin-left: 0; /* Align to the left */
+    }
+
+    .navbar_portfolio {
+        justify-content: space-between; /* Space out Portfolio and Hamburger */
+    }
+
+    .welcome_responsive{
+        display: block;
+        width: max-content;
+    }
+
+    .hamburger{
+        display: block;
+        scale: 1.5;
+    }
+
+    .menu_responsive{
+        margin-top: 320px;
+        display: block;
+        position: absolute;
+        right: 0;
+
+    }
+    .responsive_menu_options{
+        /* position: absolute; */
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1;
+        margin-left: -30px;
+    }
+
+    .responsive_menu_options li :hover{
+        background-color: #FD853A;
+        border-radius: 30px;
+        padding: 10px 10 10px;
+        width: max-content;
+    }
+    .responsive_menu_options li a{
+        padding: 10px;
+    }
+    .responsive_menu_options li:hover a{
+        border-radius: 30px;
+        background-color: #FD853A;
+        color: white !important;
+        font-weight: bolder;
+    }
+    .menu_responsive.show {
+        display: block; /* Show when `show` class is added */
+        z-index: 99;
+        background-color: #f2f2f5;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 350px;
+        height:fit-content;
+    }
+    
+    .menu_responsive.hide {
+        display: none; /* Hide when `hide` class is added */
+        z-index: 99;
+    }
+}

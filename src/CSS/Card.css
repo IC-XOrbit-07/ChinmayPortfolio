@@ -1,0 +1,7 @@
+@font-face {
+    font-family: apple_font_sfpro;
+    src: url('../Fonts/Inter/Inter-Light.otf');
+}
+.card-text{
+    font-family: apple_font_sfpro;
+}
